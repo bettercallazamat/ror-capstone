@@ -1,8 +1,11 @@
 class OpinionsController < ApplicationController
   def index
-    redirect_to sign_in_path if current_user.nil?
-    @opinion = Opinion.new
-    @opinions = Opinion.most_recent
+    if logged_in?
+      @opinion = Opinion.new
+      @opinions = Opinion.most_recent
+    else
+      redirect_to sign_in_path
+    end
   end
 
   def create
