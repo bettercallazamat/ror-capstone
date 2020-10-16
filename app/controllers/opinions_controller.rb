@@ -1,7 +1,7 @@
 class OpinionsController < ApplicationController
   def index
     @opinion = Opinion.new
-    @opinions = Opinion.order_by_most_recent
+    @opinions = Opinion.most_recent
   end
 
   def create

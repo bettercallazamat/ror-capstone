@@ -1,0 +1,8 @@
+<h3>TWEET</h3>
+<%= form_for(@opinion, url: opinion_path) do |f| %>
+<%= f.text_field :text, autofocus: true, placeholder: "Write your opinion..." %>
+<%= f.submit %>
+<% end %>
+
+<h4>ALL TWEET</h4>
+<%= render @opinion %>

@@ -1,0 +1,13 @@
+<p><%= link_to opinion.author.fullname, user_path(opinion.author.id) %></p>
+<p><%= opinion.text %></p>
+<p>All comments:</p>
+
+<% opinion.comments.each do |comment| %>
+  <p><%= comment.user.username %>: <%= comment.content %></p>
+  <span> <%= comment.created_at.strftime("%Y/%m/%d") %> </span>
+<% end %>
+
+<%= form_for(opinion.comments.new, url: opinion_comments_path(opinion)) do |form| %>
+  <%= form.text_field :text, id: :comment_text, placeholder: 'Add new Comment' %>
+  <%= form.submit 'Comment' %>
+<% end %>
