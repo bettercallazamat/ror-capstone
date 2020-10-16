@@ -9,8 +9,9 @@ Rails.application.routes.draw do
 
   post 'opinion', to: 'opinions#create'
   post 'follow', to: 'followings#create'
+  delete '/user/:id/unfollow', to: 'followings#destroy'
 
-  get 'users/:id', to: 'users#show', as: 'user'
+  get '/user/:id', to: 'users#show', as: 'user'
 
   get 'sign_in', to: 'sessions#new'
   post 'sign_in', to: 'sessions#create'
