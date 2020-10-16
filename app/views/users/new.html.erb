@@ -1,0 +1,6 @@
+<%= form_for(@user) do |f| %>
+  <%= f.text_field :username, placeholder: "Enter a username" %>
+  <%= f.text_field :fullname, placeholder: "Enter full name" %>
+  <%= f.submit %>
+  <p>Already have an account?<%= link_to 'Sign in', sign_in_path %></p>
+<% end %>
