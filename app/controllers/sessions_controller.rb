@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       redirect_to root_path
     else
       flash.now[:alert] = 'Something went wrong...'
-      render sign_in_path
+      render :new
     end
   end
 
