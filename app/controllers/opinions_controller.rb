@@ -1,0 +1,2 @@
+class OpinionsController < ApplicationController
+end
