@@ -10,4 +10,8 @@ class User < ApplicationRecord
 
   validates :username, presence: true, uniqueness: true, length: { minimum: 4, maximum: 20 }
   validates :fullname, presence: true, length: { minimum: 6, maximum: 30 }
+
+  def who_to_follow
+    User.where.not(id: id).where.not(id: followeds).order('created_at DESC')
+  end
 end

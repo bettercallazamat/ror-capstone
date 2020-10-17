@@ -1,0 +1,3 @@
+<% @who_to_follow.each do |who_to_follow| %>
+  <%= link_to who_to_follow.fullname, user_path(who_to_follow.id) %>
+<% end %> 
