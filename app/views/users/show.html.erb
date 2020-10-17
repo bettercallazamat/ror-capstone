@@ -18,4 +18,22 @@
   <p><%= link_to @user.fullname, user_path(@user.id) %></p>
   <p>@<%= @user.username %></p>
   <%= followings_button(@user) %>
+
+  <p><%= @user.opinions.count %> Tweets</p>
+  <p><%= @user.followeds.count %> Following</p>
+  <p><%= @user.followers.count %> Followers</p>
+
+  <h4>FOLLOWED BY</h4>
+    <% if @user.followers.none? %>
+      <p>NO FOLLOWERS</p>
+    <% else %>
+      <% @user.followers.each do |follower| %>
+      <p>
+        <%= link_to follower.fullname, user_path(follower.id) %>
+        @<%= follower.username %>
+      </p>
+      <%= followings_button(follower) %>
+    <% end %>
+  <% end %>
+
 </div>
