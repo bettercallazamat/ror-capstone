@@ -13,11 +13,10 @@ class OpinionsController < ApplicationController
     @opinion = current_user.opinions.build(opinion_params)
     if @opinion.save
       flash[:notice] = 'Opinion was created successfully'
-      redirect_to root_path
     else
       flash[:alert] = 'Something went wrong...'
-      render root_path
     end
+    redirect_back(fallback_location: root_path)
   end
 
   private

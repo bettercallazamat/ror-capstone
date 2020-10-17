@@ -7,8 +7,8 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
   end
 
-  post 'follow', to: 'followings#create'
-  delete '/user/:id/unfollow', to: 'followings#destroy'
+  post '/user/:id/follow', to: 'followings#create', as: 'follow'
+  delete '/user/:id/unfollow', to: 'followings#destroy', as: 'unfollow'
 
   get '/user/:id', to: 'users#show', as: 'user'
 
