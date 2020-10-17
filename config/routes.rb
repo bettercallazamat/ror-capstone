@@ -14,5 +14,5 @@ Rails.application.routes.draw do
 
   get 'sign_in', to: 'sessions#new'
   post 'sign_in', to: 'sessions#create'
-  delete 'log_out', to: 'sessions#destroy'
+  delete 'sign_out', to: 'sessions#destroy'
 end
