@@ -1,5 +1,5 @@
 <%= form_for(:session, url: sign_in_path) do |f| %>
     <%= f.text_field :username, autofocus: true, placeholder: "Enter a username" %>
-    <%= f.submit 'Login', class: "btn btn-primary" %>
+    <%= f.submit 'Login' %>
     <p>Don't have an account?<%= link_to 'Signup', new_user_path %></p>
 <% end %>
