@@ -22,12 +22,30 @@
         <%= link_to current_user.fullname, user_path(current_user.id) %> 
         <p>Following: <%= current_user.followeds.count %></p>
         <p>Followers: <%= current_user.followers.count %></p>
-        <%= link_to "Home", root_path %>
-        <%= link_to "Discover", root_path %>
-        <%= link_to "Connect", root_path %>
-        <%= link_to "Profile", user_path(current_user.id) %>
-        <%= link_to "Statistics", root_path %>
-        <%= link_to "Sign out", sign_out_path, method: :delete %>
+        <%= link_to root_path do %>
+          <%= fa_icon "home" %>
+          <span>HOME</span>
+        <% end %>
+        <%= link_to root_path do %>
+          <%= fa_icon "at" %>
+          <span>CONNECT</span>
+        <% end %>
+        <%= link_to root_path do %>
+          <%= fa_icon "hashtag" %>
+          <span>DISCOVER</span>
+        <% end %>
+        <%= link_to user_path(current_user.id) do %>
+          <%= fa_icon "user" %>
+          <span>PROFILE</span>
+        <% end %>
+        <%= link_to root_path do %>
+          <%= fa_icon "calculator" %>
+          <span>STATISTCS</span>
+        <% end %>
+        <%= link_to sign_out_path, method: :delete do %>
+          <%= fa_icon "sign-out" %>
+          <span>SIGN OUT</span>
+        <% end %>
       </nav>
 
       <header>
