@@ -5,12 +5,12 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if @user.save
+    if @user.save!
       session[:user_id] = @user.id
       flash[:notice] = 'Account is created.'
       redirect_to root_path
     else
-      flash[:alert] = 'Account is not created. Something went wrong.'
+      flash.now[:alert] = 'Account is not created. Something went wrong.'
       render new_user_path
     end
   end
@@ -24,6 +24,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :fullname)
+    params.require(:user).permit(:username, :fullname, :photo)
   end
 end

@@ -5,16 +5,11 @@
 <%= link_to 'FAVORITES', '#' %>
 <%= link_to 'LISTS', '#' %>
 
-<h3 class="card-title border-bottom pb-3">TWEET TO <%= @user.fullname.upcase %></h3>
-<%= form_for(@opinion) do |f| %>
-  <%= f.text_field :text, autofocus: true, placeholder: "Write your opinion..." %>
-  <%= f.submit %>
-<% end %>
-
 <h3>ALL TWEETS BY <%= @user.fullname.upcase %></h3>
 <%= render @opinions %>
 
 <div class="right-profile">
+  <%= image_tag @user.photo %>
   <p><%= link_to @user.fullname, user_path(@user.id) %></p>
   <p>@<%= @user.username %></p>
   <%= followings_button(@user) %>
@@ -29,6 +24,7 @@
     <% else %>
       <% @user.followers.each do |follower| %>
       <p>
+        <%= image_tag follower.photo %>
         <%= link_to follower.fullname, user_path(follower.id) %>
         @<%= follower.username %>
       </p>
