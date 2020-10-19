@@ -4,8 +4,168 @@
 
 @import "bootstrap/scss/bootstrap";
 
+$dark-blue: #1c2a3d;
+$light-blue: #54ace3;
+$text-dark: #6c8297;
+$text-light: #fafcfc;
+$text-gray: #b3b4b6;
+$dark: #000;
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: $text-gray;
+}
+
+nav {
+  background-color: $dark-blue;
+  height: auto;
+}
+
+.photo-and-name {
+  height: 100px;
+}
+
+.nav-counter {
+  border-top: 1px solid $text-dark;
+  border-bottom: 1px solid $text-dark;
+  padding: 10px 0;
+}
+
+.photo-and-name a, .nav-counter {
+  color: $text-light;
+}
+
+.nav-links a {
+  color: $text-gray;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
 img {
-    width: 80px;
-    height: 80px;
+  width: 60px;
+  height: 60px;
+}
+
+main {
+  background-color: #dadde5;
+}
+
+header {
+  height: 100px;
+  background-color: $light-blue;
+  margin: 0 -15px;
+  padding: 0 30px;
+  font-size: 25px;
+}
+
+.header-left {
+  color: $text-light;
+  font-size: 30px;
+}
+
+.header-right a {
+  color: $text-dark;
+  padding-left: 20px;
+}
+
+.sign-in, .sign-up {
+  height: 100vh;
+  padding-top: 20%;
+}
+
+.opinions-section {
+  border-right: 3px solid $text-dark;
+}
+
+.opinions-nav {
+  margin: 0 -15px 0 -30px;
+  padding-left: 15px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid $text-dark;
+}
+
+.opinions-nav a {
+  color: $text-gray;
+  padding-right: 30px;
+}
+
+.opinions-nav a:first-of-type {
+  color: $text-dark;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.tweet-form, .tweet-feed {
+  background-color: #f9f9f9;
+  border: 1px solid $text-gray;
+}
+
+.tweet-form h3, .tweet-feed h3 {
+  font-size: 18px;
+}
+
+.tweet-feed h3 {
+  border-bottom: 2px solid $text-gray;
+}
+
+.tweet-feed .main-content {
+  min-height: 60px;
+}
+
+.tweet-feed .author {
+  color: $dark;
+  font-size: 16px;
+}
+
+.tweet-feed h4 {
+  color: $dark;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.tweet-feed .content img {
+  height: 30px;
+  width: 30px;
+}
+
+.comment-author a, .comment-date, .comment-author {
+  color: $dark;
+}
+
+.right-section {
+  margin-right: -15px;
+}
+
+.who-to-follow h3 {
+  font-size: 18px;
+  height: 70px;
+  text-align: center;
+  padding-top: 24px;
+  border-bottom: 3px solid $text-dark;
+}
+
+.who-to-follow img {
+  width: 40px;
+  height: 40px;
+}
+
+.who-to-follow-fullname {
+  font-size: 14px;
+  color: $text-dark;
+}
+
+.right-section, .who-to-follow span {
+  font-size: 12px;
+}
+
+.trending h3 {
+  font-size: 18px;
+  text-align: center;
+  height: 60px;
+  padding-top: 16px;
+  border-top: 3px solid $text-dark;
+  border-bottom: 3px solid $text-dark;
 }
 

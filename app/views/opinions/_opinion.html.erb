@@ -1,16 +1,30 @@
+<div class="d-flex mt-3">
 <%= image_tag opinion.author.photo %>
-<p><%= link_to opinion.author.fullname, user_path(opinion.author.id) %></p>
-<p><%= opinion.text %></p>
-<p>All comments:</p>
+<div class="content ml-2">
+  <div class="main-content">
+    <span><%= link_to opinion.author.fullname, user_path(opinion.author.id), class: "author" %></span><br>
+    <span class="tweet-text"><%= opinion.text %></span>
+  </div>
 
-<% opinion.comments.each do |comment| %>
-  <%= image_tag comment.user.photo %>
-  <p><%= comment.user.username %>: <%= comment.text %></p>
-  <span> <%= comment.created_at.strftime("%Y/%m/%d") %> </span>
-  <span> <%= l comment.created_at %> </span>
-<% end %>
+  <div class="comment-section mt-2">
+  <% if opinion.comments.present? %>
+  <h4>All comments:</h4>
+  <% opinion.comments.each do |comment| %>
+    <div class="comment-content my-1">
+      <%= image_tag comment.user.photo %>
+      <span class="comment-author">@<%= link_to comment.user.username, user_path(comment.user.id) %>:</span>
+      <span class="comment-date"> at <%= comment.created_at.strftime("%Y/%m/%d") %>: </span>
+      <span class="comment-text"><%= comment.text %></span>
+    </div>
+  <% end %>
+  <% end %>
+  </div>
 
-<%= form_for(opinion.comments.new, url: opinion_comments_path(opinion)) do |form| %>
-  <%= form.text_field :text, id: :comment_text, placeholder: 'Add new Comment' %>
-  <%= form.submit 'Comment' %>
-<% end %>
+  <%= form_for(opinion.comments.new, url: opinion_comments_path(opinion)) do |form| %>
+    <div class="form-group">
+      <%= form.text_field :text, id: :comment_text, class: "form-control", placeholder: 'Add comment' %>
+    </div>
+    <%= form.submit 'Comment', class: "d-none" %>
+  <% end %>
+</div>
+</div>

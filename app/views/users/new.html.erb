@@ -1,14 +1,16 @@
-<div class="sign-up-form row justify-content-center">
-  <h3 class="text-center col-12">Sign Up</h3>
-  <%= form_for(@user, html:{ class: "col-5"}) do |f| %>
-    <div class="form-group">
-      <%= f.text_field :username, class: "form-control", placeholder: "Enter a username" %>
-    </div>
-    <div class="form-group">
-      <%= f.text_field :fullname, class: "form-control", placeholder: "Enter full name" %>
-    </div>
-    <%= f.file_field :photo, class: "mb-3" %>
-    <%= f.submit class: "btn btn-primary col-12" %>
-    <p class="col-12 text-center">Already have an account? <%= link_to 'Sign in', sign_in_path %></p>
-  <% end %>
+<div class="container sign-up">
+  <div class="sign-up-form row justify-content-center">
+    <%= form_for(@user, html:{ class: "col-5"}) do |f| %>
+    <h3 class="text-center">Sign Up</h3>
+      <div class="form-group">
+        <%= f.text_field :username, class: "form-control", placeholder: "Enter a username" %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :fullname, class: "form-control", placeholder: "Enter full name" %>
+      </div>
+      <%= f.file_field :photo, class: "mb-3" %>
+      <%= f.submit class: "btn btn-primary col-12" %>
+      <p class="col-12 text-center">Already have an account? <%= link_to 'Sign in', sign_in_path %></p>
+    <% end %>
+  </div>
 </div>

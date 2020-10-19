@@ -1,23 +1,40 @@
-<h3>TWEET</h3>
-<%= form_for(@opinion) do |f| %>
-<%= f.text_field :text, autofocus: true, placeholder: "Write your opinion..." %>
-<%= f.submit %>
-<% end %>
+<div class="opinions-section col-9">
+  <div class="opinions-nav">
+    <a href="#">TWEETS</a>
+    <a href="#">PHOTOS</a>
+    <a href="#">VIDEOS</a>
+  </div>
 
-<h4>ALL TWEET</h4>
-<%= render @opinions %>
+  <%= form_for(@opinion, html: { class: "tweet-form rounded mt-4 p-3" }) do |f| %>
+    <h3 class="mb-3">TWEET SOMETHING</h3>
+    <div class="form-group">
+    <%= f.text_field :text, class: "form-control", autofocus: true, placeholder: "Compose your tweet..." %>
+    </div>
+    <%= f.submit class: "d-none"%>
+  <% end %>
 
-<div>
-  <h4>WHO TO FOLLOW</h4>
-  <%= render @who_to_follow %>
-
-  <%= link_to "Popular accounts", "#"%>
-  <%= link_to "Find friends", "#"%>
+  <div class="tweet-feed rounded mt-3 p-3">
+    <h3 class="pb-3">ALL TWEETS</h3>
+    <%= render @opinions %>
+  </div>
 </div>
 
-<h4>TRENDING</h4>
-<p><a href="#" class="text-gray"> #hashtag1 </a></p>
-<p><a href="#" class="text-gray"> #hashtag2 </a></p>
-<p><a href="#" class="text-gray"> #hashtag3 </a></p>
-<p><a href="#" class="text-gray"> #hashtag4 </a></p>
-<p><a href="#" class="text-gray"> #hashtag5 </a></p>
+<div class="right-section col">
+  <div class="who-to-follow">
+    <h3>WHO TO FOLLOW</h3>
+    <%= render @who_to_follow %>
+
+    <div class="who-to-follow-links my-3">
+      <%= link_to "Popular accounts", "#", class: "mr-1"%>
+      <%= link_to "Find friends", "#"%>  
+    </div>
+  </div>
+  <div class="trending mt-3">
+    <h3>TRENDING</h3>
+    <p><a href="#" class="text-gray"> #hashtag1 </a></p>
+    <p><a href="#" class="text-gray"> #hashtag2 </a></p>
+    <p><a href="#" class="text-gray"> #hashtag3 </a></p>
+    <p><a href="#" class="text-gray"> #hashtag4 </a></p>
+    <p><a href="#" class="text-gray"> #hashtag5 </a></p>
+  </div>
+</div>
