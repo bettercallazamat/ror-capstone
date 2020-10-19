@@ -19,6 +19,11 @@ body {
 nav {
   background-color: $dark-blue;
   height: auto;
+  min-height: 100vh;
+}
+
+h3 {
+  font-size: 18px;
 }
 
 .photo-and-name {
@@ -75,6 +80,8 @@ header {
 
 .opinions-section {
   border-right: 3px solid $text-dark;
+  height: auto;
+  min-height: 80vh;
 }
 
 .opinions-nav {
@@ -100,10 +107,6 @@ header {
 .tweet-form, .tweet-feed {
   background-color: #f9f9f9;
   border: 1px solid $text-gray;
-}
-
-.tweet-form h3, .tweet-feed h3 {
-  font-size: 18px;
 }
 
 .tweet-feed h3 {
@@ -138,21 +141,20 @@ header {
   margin-right: -15px;
 }
 
-.who-to-follow h3 {
-  font-size: 18px;
+.who-to-follow h3, .followed-by-section h3 {
   height: 70px;
   text-align: center;
   padding-top: 24px;
   border-bottom: 3px solid $text-dark;
 }
 
-.who-to-follow img {
+.who-to-follow img, .followed-by-section img {
   width: 40px;
   height: 40px;
 }
 
-.who-to-follow-fullname {
-  font-size: 14px;
+.who-to-follow-fullname, .followed-by-fullname {
+  font-size: 13px;
   color: $text-dark;
 }
 
@@ -169,3 +171,37 @@ header {
   border-bottom: 3px solid $text-dark;
 }
 
+.follow-btn, .unfollow-btn, .profile-photo i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: 1.5px solid $text-gray;
+  color: $text-gray;
+}
+
+.follow-btn:hover, .unfollow-btn:hover, .profile-photo i:hover {
+  border-color: $light-blue;
+  color: $light-blue;
+  text-decoration: none;
+}
+
+.profile-photo img{
+  width: 80px;
+  height: 80px;
+}
+
+.profile-photo .unfollow-btn, .profile-photo .follow-btn, .profile-photo i {
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid $text-gray;
+  border-radius: 50%;
+}
+
+.profile-desc-counts p:first-of-type, .profile-desc-counts p:nth-of-type(2)  {
+  border-right: 2px solid $dark;
+  // margin: 1px;
+}

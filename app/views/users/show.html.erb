@@ -1,35 +1,60 @@
-<%= link_to 'TWEETS', '#' %>
-<%= link_to 'PHOTOS', '#' %>
-<%= link_to 'FOLLOWING', '#' %>
-<%= link_to 'FOLLOWERS', '#' %>
-<%= link_to 'FAVORITES', '#' %>
-<%= link_to 'LISTS', '#' %>
+<div class="opinions-section col-9">
+  <div class="opinions-nav">
+    <%= link_to 'TWEETS', '#' %>
+    <%= link_to 'FOLLOWING', '#' %>
+    <%= link_to 'FOLLOWERS', '#' %>
+  </div>
 
-<h3>ALL TWEETS BY <%= @user.fullname.upcase %></h3>
-<%= render @opinions %>
+  <div class="tweet-feed rounded mt-3 p-3">
+    <h3 class="pb-3">ALL TWEETS BY <%= @user.fullname.upcase %></h3>
+    <%= render @opinions %>
+  </div>
+</div>
 
-<div class="right-profile">
-  <%= image_tag @user.photo %>
-  <p><%= link_to @user.fullname, user_path(@user.id) %></p>
-  <p>@<%= @user.username %></p>
-  <%= followings_button(@user) %>
+<div class="right-section right-profile col">
+  <div class="profile-desc">
+    <div class="profile-photo d-flex justify-content-center align-items-center">
+      <%= fa_icon "twitter" %>
+      <%= image_tag @user.photo, class: "rounded-circle mx-2 my-4" %>
+      <%= followings_button(@user) %>
+    </div>
+    <span><%= link_to @user.fullname, user_path(@user.id), class: "profile-fullname" %></span><br>
+    <span class="profile-username">@<%= @user.username %></span>
+    <div class="profile-desc-counts d-flex justify-content-around align-items-center text-center">
+      <div class="profile-desc-count">
+        <span><%= @user.opinions.count %></span><br>
+        <span>Tweets</span>
+      </div>
+      <div class="profile-desc-count">
+        <span><%= @user.followeds.count %></span><br>
+        <span>Following</span>
+      </div>
+      <div class="profile-desc-count">
+        <span><%= @user.followers.count %></span><br>
+        <span>Followers<span>
+      <div>
+      
+      
+    </div>
+  </div>
 
-  <p><%= @user.opinions.count %> Tweets</p>
-  <p><%= @user.followeds.count %> Following</p>
-  <p><%= @user.followers.count %> Followers</p>
+  
 
-  <h4>FOLLOWED BY</h4>
+  <div class="followed-by-section">
+    <h3>FOLLOWED BY</h3>
     <% if @user.followers.none? %>
       <p>NO FOLLOWERS</p>
     <% else %>
       <% @user.followers.each do |follower| %>
-      <p>
-        <%= image_tag follower.photo %>
-        <%= link_to follower.fullname, user_path(follower.id) %>
-        @<%= follower.username %>
-      </p>
-      <%= followings_button(follower) %>
+        <div class="followed-by-person d-flex align-items-center my-1">
+          <%= image_tag follower.photo, class: "mr-1" %>
+          <span>
+            <%= link_to follower.fullname, user_path(follower.id), class: "followed-by-fullname" %>
+            @<%= follower.username %>
+          </span>
+          <%= followings_button(follower) %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
-
+  </div>
 </div>

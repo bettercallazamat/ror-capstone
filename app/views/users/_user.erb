@@ -1,11 +1,7 @@
-<div class="who-to-follow-content mt-4">
-<% @who_to_follow.each do |who_to_follow| %>
-  <div class="who-to-follow-person d-flex mb-1">
-    <%= image_tag who_to_follow.photo, class: "rounded-circle mr-1" %>
-    <div class="who-to-follow-text d-block">
-      <%= link_to who_to_follow.fullname, user_path(who_to_follow.id), class: "who-to-follow-fullname" %><br>
-      <span><%= last_follower(who_to_follow) %></span>
-    </div>
+<div class="who-to-follow-person d-flex mb-1">
+  <%= image_tag user.photo, class: "rounded-circle mr-1" %>
+  <div class="who-to-follow-text d-block">
+    <%= link_to user.fullname, user_path(user.id), class: "who-to-follow-fullname" %><br>
+    <span><%= last_follower(user) %></span>
   </div>
-<% end %> 
 </div>
