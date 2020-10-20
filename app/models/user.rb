@@ -14,23 +14,19 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true, length: { minimum: 4, maximum: 20 }
   validates :fullname, presence: true, length: { minimum: 6, maximum: 30 }
 
+  validates :photo, presence: true
+
   def who_to_follow
     User.where.not(id: id).where.not(id: followeds).order('created_at DESC')
   end
 
-  after_commit :add_default_photo, on: :create
+  after_commit :add_default_cover, on: :create
 
   private 
 
-  def add_default_photo 
-    unless photo.attached?
-      self.photo.attach(io: File.open(Rails.root.join("app", "assets", "imgs", "default-user.jpg")), filename: 'default.jpg' , content_type: "image/jpg")
-    end
-  end
-
-  def add_default_photo 
+  def add_default_cover 
     unless cover_image.attached?
-      self.photo.attach(io: File.open(Rails.root.join("app", "assets", "imgs", "default-cover.jpg")), filename: 'default.jpg' , content_type: "image/jpg")
+      self.cover_image.attach(io: File.open(Rails.root.join("app", "assets", "images", "default-cover.jpg")), filename: 'default-cover.jpg' , content_type: "image/jpg")
     end
   end
 
