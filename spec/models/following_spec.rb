@@ -1,7 +1,7 @@
 # spec/models/following_spec.rb
 require 'rails_helper'
 
-RSpec.describe Opinion, :type => :model do
+RSpec.describe Following, :type => :model do
   it "is valid with valid attributes" do
     user1 = User.new(username: "johndoe", fullname: "John Doe")
     user1.photo.attach(io: File.open(Rails.root.join("app", "assets", "images", "default-cover.jpg")), filename: 'default-cover.jpg' , content_type: "image/jpg")
