@@ -22,11 +22,14 @@ class User < ApplicationRecord
 
   after_commit :add_default_cover, on: :create
 
-  private 
+  private
 
-  def add_default_cover 
+  # rubocop:disable Style/GuardClause
+  def add_default_cover
     unless cover_image.attached?
-      self.cover_image.attach(io: File.open(Rails.root.join("app", "assets", "images", "default-cover.jpg")), filename: 'default-cover.jpg' , content_type: "image/jpg")
+      cover_image.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'default-cover.jpg')),
+                         filename: 'default-cover.jpg', content_type: 'image/jpg')
     end
   end
+  # rubocop:enable Style/GuardClause
 end
