@@ -29,6 +29,4 @@ class User < ApplicationRecord
       self.cover_image.attach(io: File.open(Rails.root.join("app", "assets", "images", "default-cover.jpg")), filename: 'default-cover.jpg' , content_type: "image/jpg")
     end
   end
-
-
 end

@@ -3,14 +3,14 @@ require 'rails_helper'
 
 RSpec.describe Opinion, :type => :feature do
   def create_user
-    user = User.new(username: "johndoe", fullname: "John Doe")
+    user = User.new(username: "johndoe1", fullname: "John Doe1")
     user.photo.attach(io: File.open(Rails.root.join("app", "assets", "images", "default-cover.jpg")), filename: 'default-cover.jpg' , content_type: "image/jpg")
     user.save
   end
 
   def log_in 
     visit sign_in_path
-    fill_in 'session_username', with: "johndoe"
+    fill_in 'session_username', with: "johndoe1"
     find("input[type='submit']").click
   end
   
