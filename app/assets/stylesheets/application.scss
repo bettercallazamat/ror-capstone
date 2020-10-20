@@ -133,6 +133,10 @@ header {
   width: 30px;
 }
 
+.tweet-feed .content {
+  flex-grow: 1;
+}
+
 .comment-author a, .comment-date, .comment-author {
   color: $dark;
 }
@@ -203,5 +207,32 @@ header {
 
 .profile-desc-counts p:first-of-type, .profile-desc-counts p:nth-of-type(2)  {
   border-right: 2px solid $dark;
-  // margin: 1px;
+  margin: 1px;
+}
+
+.profile-photo i {
+  font-size: 15px;
+}
+
+.profile-desc-counts {
+  border-top: 2px solid $text-dark;
+  border-bottom: 2px solid $text-dark;
+}
+
+.profile-desc-count-center {
+  border-left: 2px solid $text-dark;
+  border-right: 2px solid $text-dark;
+}
+
+.profile-fullname, .profile-desc-counter {
+  color: $dark;
+  font-size: 18px;
+}
+
+.profile-username {
+  font-size: 16px;
+}
+
+form.new_comment {
+  width: auto;
 }

@@ -12,34 +12,29 @@
 </div>
 
 <div class="right-section right-profile col">
-  <div class="profile-desc">
+  <div class="profile-desc text-center">
     <div class="profile-photo d-flex justify-content-center align-items-center">
-      <%= fa_icon "twitter" %>
-      <%= image_tag @user.photo, class: "rounded-circle mx-2 my-4" %>
       <%= followings_button(@user) %>
+      <%= image_tag @user.photo, class: "rounded-circle mx-2 my-4" %>
+      <%= fa_icon "list" %>
     </div>
-    <span><%= link_to @user.fullname, user_path(@user.id), class: "profile-fullname" %></span><br>
+    <span><%= link_to @user.fullname, user_path(@user.id), class: "profile-fullname text-uppercase" %></span><br>
     <span class="profile-username">@<%= @user.username %></span>
-    <div class="profile-desc-counts d-flex justify-content-around align-items-center text-center">
+    <div class="profile-desc-counts d-flex justify-content-around align-items-center text-center mt-2 py-2">
       <div class="profile-desc-count">
-        <span><%= @user.opinions.count %></span><br>
+        <span class="profile-desc-counter"><%= @user.opinions.count %></span><br>
         <span>Tweets</span>
       </div>
-      <div class="profile-desc-count">
-        <span><%= @user.followeds.count %></span><br>
+      <div class="profile-desc-count profile-desc-count-center px-2">
+        <span class="profile-desc-counter"><%= @user.followeds.count %></span><br>
         <span>Following</span>
       </div>
       <div class="profile-desc-count">
-        <span><%= @user.followers.count %></span><br>
+        <span class="profile-desc-counter"><%= @user.followers.count %></span><br>
         <span>Followers<span>
       <div>
-      
-      
     </div>
-  </div>
-
-  
-
+  </div></div></div>
   <div class="followed-by-section">
     <h3>FOLLOWED BY</h3>
     <% if @user.followers.none? %>
@@ -48,10 +43,10 @@
       <% @user.followers.each do |follower| %>
         <div class="followed-by-person d-flex align-items-center my-1">
           <%= image_tag follower.photo, class: "mr-1" %>
-          <span>
+          <div>
             <%= link_to follower.fullname, user_path(follower.id), class: "followed-by-fullname" %>
-            @<%= follower.username %>
-          </span>
+            <span>@<%= follower.username %></span>
+          </div>
           <%= followings_button(follower) %>
         </div>
       <% end %>
