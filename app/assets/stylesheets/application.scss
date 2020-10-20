@@ -30,6 +30,14 @@ h4 {
   font-size: 30px;
 }
 
+.notice, .alert {
+  width: 100%;
+  display: block;
+  font-size: 18px;
+  padding: 5px 0;
+  color: $text-light;
+}
+
 .photo-and-name {
   height: 100px;
 }

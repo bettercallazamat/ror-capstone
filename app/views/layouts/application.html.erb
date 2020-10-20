@@ -11,12 +11,12 @@
 
   <body>
     <div class="container">
-      <div class="row notice-and-alert">
+      <div class="row notice-and-alert text-center">
         <% if notice.present? %>
-          <p><%= notice %></p>
+          <span class="notice bg-success"><%= notice %></span>
         <% end %>
         <% if alert.present? %>
-          <p><%= alert %></p>
+          <span class="alert bg-warning"><%= alert %></span>
         <% end %>
       </div>
 
