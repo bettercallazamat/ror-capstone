@@ -59,3 +59,96 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
+
+Layout/BeginEndAlignment: # (new in 0.91)
+  Enabled: false
+Layout/EmptyLinesAroundAttributeAccessor: # (new in 0.83)
+  Enabled: false
+Layout/SpaceAroundMethodCallOperator: # (new in 0.82)
+  Enabled: false
+Lint/BinaryOperatorWithIdenticalOperands: # (new in 0.89)
+  Enabled: false
+Lint/ConstantDefinitionInBlock: # (new in 0.91)
+  Enabled: false
+Lint/DeprecatedOpenSSLConstant: # (new in 0.84)
+  Enabled: false
+Lint/DuplicateElsifCondition: # (new in 0.88)
+  Enabled: false
+Lint/DuplicateRequire: # (new in 0.90)
+  Enabled: false
+Lint/DuplicateRescueException: # (new in 0.89)
+  Enabled: false
+Lint/EmptyConditionalBody: # (new in 0.89)
+  Enabled: false
+Lint/EmptyFile: # (new in 0.90)
+  Enabled: false
+Lint/FloatComparison: # (new in 0.89)
+  Enabled: false
+Lint/HashCompareByIdentity: # (new in 0.93)
+  Enabled: false
+Lint/IdentityComparison: # (new in 0.91)
+  Enabled: false
+Lint/MissingSuper: # (new in 0.89)
+  Enabled: false
+Lint/MixedRegexpCaptureTypes: # (new in 0.85)
+  Enabled: false
+Lint/OutOfRangeRegexpRef: # (new in 0.89)
+  Enabled: false
+Lint/RedundantSafeNavigation: # (new in 0.93)
+  Enabled: false
+Lint/SelfAssignment: # (new in 0.89)
+  Enabled: false
+Lint/TopLevelReturnWithArgument: # (new in 0.89)
+  Enabled: false
+Lint/TrailingCommaInAttributeDeclaration: # (new in 0.90)
+  Enabled: false
+Lint/UnreachableLoop: # (new in 0.89)
+  Enabled: false
+Lint/UselessMethodDefinition: # (new in 0.90)
+  Enabled: false
+Lint/UselessTimes: # (new in 0.91)
+  Enabled: false
+Style/AccessorGrouping: # (new in 0.87)
+  Enabled: false
+Style/BisectedAttrAccessor: # (new in 0.87)
+  Enabled: false
+Style/CaseLikeIf: # (new in 0.88)
+  Enabled: false
+Style/ClassEqualityComparison: # (new in 0.93)
+  Enabled: false
+Style/CombinableLoops: # (new in 0.90)
+  Enabled: false
+Style/ExplicitBlockArgument: # (new in 0.89)
+  Enabled: false
+Style/ExponentialNotation: # (new in 0.82)
+  Enabled: false
+Style/GlobalStdStream: # (new in 0.89)
+  Enabled: false
+Style/HashAsLastArrayItem: # (new in 0.88)
+  Enabled: false
+Style/HashLikeCase: # (new in 0.88)
+  Enabled: false
+Style/KeywordParametersOrder: # (new in 0.90)
+  Enabled: false
+Style/OptionalBooleanParameter: # (new in 0.89)
+  Enabled: false
+Style/RedundantAssignment: # (new in 0.87)
+  Enabled: false
+Style/RedundantFetchBlock: # (new in 0.86)
+  Enabled: false
+Style/RedundantFileExtensionInRequire: # (new in 0.88)
+  Enabled: false
+Style/RedundantRegexpCharacterClass: # (new in 0.85)
+  Enabled: false
+Style/RedundantRegexpEscape: # (new in 0.85)
+  Enabled: false
+Style/RedundantSelfAssignment: # (new in 0.90)
+  Enabled: false
+Style/SingleArgumentDig: # (new in 0.89)
+  Enabled: false
+Style/SlicingWithRange: # (new in 0.83)
+  Enabled: false
+Style/SoleNestedConditional: # (new in 0.89)
+  Enabled: false
+Style/StringConcatenation: # (new in 0.89)
+  Enabled: false
