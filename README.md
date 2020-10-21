@@ -42,9 +42,9 @@ In this project the following was used:
 
 ## Screenshot
 
-![Screenshot](app/images/screenshot1.png)
+![Screenshot](app/assets/images/screenshot1.png)
 
-![Screenshot](app/images/screenshot2.png)
+![Screenshot](app/assets/images/screenshot2.png)
 
 # Getting a Copy and Contributing
 
