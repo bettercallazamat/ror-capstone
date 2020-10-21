@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
   def logged_in?
     !current_user.nil?
   end
+
+  def require_sign_in
+    redirect_to sign_in_path, alert: 'Please sign in.' unless current_user
+  end
 end
