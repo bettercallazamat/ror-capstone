@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  before_action :redirect_to_root_path, only: [:new, :create]
+  before_action :redirect_to_root_path, only: %i[new create]
 
   def new; end
 
@@ -21,6 +21,4 @@ class SessionsController < ApplicationController
     flash[:notice] = 'You have successfully logged out'
     redirect_to sign_in_path
   end
-
-  private 
 end
