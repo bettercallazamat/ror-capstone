@@ -6,20 +6,24 @@
 
 $dark-blue: #1c2a3d;
 $light-blue: #54ace3;
-$text-dark: #6c8297;
-$text-light: #fafcfc;
-$text-gray: #b3b4b6;
-$dark: #000;
+$light-gray: #e7e8e9;
+$gray: #acadaf;
+$dark-gray: #5b6e80;
 
 body {
   font-family: "Poppins", sans-serif;
-  color: $text-gray;
+  color: $gray;
 }
 
 nav {
   background-color: $dark-blue;
   height: auto;
   min-height: 100vh;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: $light-blue;
 }
 
 h3 {
@@ -35,7 +39,7 @@ h4 {
   display: block;
   font-size: 18px;
   padding: 5px 0;
-  color: $text-light;
+  color: $light-gray;
 }
 
 .photo-and-name {
@@ -43,17 +47,17 @@ h4 {
 }
 
 .nav-counter {
-  border-top: 1px solid $text-dark;
-  border-bottom: 1px solid $text-dark;
+  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
   padding: 10px 0;
 }
 
 .photo-and-name a, .nav-counter {
-  color: $text-light;
+  color: $light-gray;
 }
 
 .nav-links a {
-  color: $text-gray;
+  color: $gray;
   padding: 20px 0;
   font-size: 20px;
 }
@@ -75,7 +79,7 @@ img {
 }
 
 main {
-  background-color: #dadde5;
+  background-color: $light-gray;
 }
 
 header {
@@ -87,13 +91,17 @@ header {
 }
 
 .header-left {
-  color: $text-light;
+  color: $light-gray;
   font-size: 30px;
 }
 
-.header-right a {
-  color: $text-dark;
+.header-right {
+  color: $dark-blue;
   padding-left: 20px;
+}
+
+.header-right:hover {
+  color: $light-gray;
 }
 
 .sign-in, .sign-up {
@@ -102,7 +110,7 @@ header {
 }
 
 .opinions-section {
-  border-right: 3px solid $text-dark;
+  border-right: 3px solid $gray;
   height: auto;
   min-height: 80vh;
 }
@@ -113,7 +121,7 @@ header {
   height: 70px;
   display: flex;
   align-items: center;
-  border-bottom: 3px solid $text-dark;
+  border-bottom: 3px solid $gray;
 }
 
 .opinions-nav-user {
@@ -121,23 +129,23 @@ header {
 }
 
 .opinions-nav a {
-  color: $text-gray;
+  color: $gray;
   padding-right: 30px;
 }
 
 .opinions-nav a:first-of-type {
-  color: $text-dark;
-  font-weight: bold;
   padding-left: 20px;
+  color: $dark-gray;
+  font-weight: bold;
 }
 
 .tweet-form, .tweet-feed {
   background-color: #f9f9f9;
-  border: 1px solid $text-gray;
+  border: 1px solid $gray;
 }
 
 .tweet-feed h3 {
-  border-bottom: 2px solid $text-gray;
+  border-bottom: 2px solid $gray;
 }
 
 .tweet-feed .main-content {
@@ -145,12 +153,12 @@ header {
 }
 
 .tweet-feed .author {
-  color: $dark;
+  color: $dark-blue;
   font-size: 16px;
 }
 
 .tweet-feed h4 {
-  color: $dark;
+  color: $dark-blue;
   font-size: 16px;
   font-weight: normal;
 }
@@ -165,7 +173,7 @@ header {
 }
 
 .comment-author a, .comment-date, .comment-author {
-  color: $dark;
+  color: $dark-blue;
 }
 
 .right-section {
@@ -176,7 +184,7 @@ header {
   height: 70px;
   text-align: center;
   padding-top: 24px;
-  border-bottom: 3px solid $text-dark;
+  border-bottom: 3px solid $gray;
 }
 
 .who-to-follow img, .followed-by-section img {
@@ -186,20 +194,11 @@ header {
 
 .who-to-follow-fullname, .followed-by-fullname {
   font-size: 13px;
-  color: $text-dark;
+  color: $dark-gray;
 }
 
 .right-section, .who-to-follow span {
   font-size: 12px;
-}
-
-.trending h3 {
-  font-size: 18px;
-  text-align: center;
-  height: 60px;
-  padding-top: 16px;
-  border-top: 3px solid $text-dark;
-  border-bottom: 3px solid $text-dark;
 }
 
 .follow-btn, .unfollow-btn, .profile-photo i {
@@ -210,11 +209,11 @@ header {
   height: 22px;
   font-size: 20px;
   border-radius: 50%;
-  border: 1.5px solid $text-gray;
-  color: $text-gray;
+  border: 1.5px solid $gray;
+  color: $gray;
 }
 
-.follow-btn:hover, .unfollow-btn:hover, .profile-photo i:hover {
+.follow-btn:hover, .unfollow-btn:hover, .profile-photo i:hover, .profile-photo a:hover {
   border-color: $light-blue;
   color: $light-blue;
   text-decoration: none;
@@ -228,12 +227,12 @@ header {
 .profile-photo .unfollow-btn, .profile-photo .follow-btn, .profile-photo i {
   width: 30px;
   height: 30px;
-  border: 1.5px solid $text-gray;
+  border: 1.5px solid $gray;
   border-radius: 50%;
 }
 
 .profile-desc-counts p:first-of-type, .profile-desc-counts p:nth-of-type(2)  {
-  border-right: 2px solid $dark;
+  border-right: 2px solid $dark-blue;
   margin: 1px;
 }
 
@@ -242,18 +241,30 @@ header {
 }
 
 .profile-desc-counts {
-  border-top: 2px solid $text-dark;
-  border-bottom: 2px solid $text-dark;
+  border-top: 2px solid $gray;
+  border-bottom: 2px solid $gray;
 }
 
 .profile-desc-count-center {
-  border-left: 2px solid $text-dark;
-  border-right: 2px solid $text-dark;
+  border-left: 2px solid $gray;
+  border-right: 2px solid $gray;
 }
 
 .profile-fullname, .profile-desc-counter {
-  color: $dark;
+  color: $dark-blue;
   font-size: 18px;
+}
+
+.last-follower a {
+  color: $dark-gray;
+}
+
+.profile-fullname:hover,
+.followed-by-fullname:hover,
+.who-to-follow-fullname:hover,
+.last-follower a:hover {
+  text-decoration: none;
+  color: $light-blue;
 }
 
 .profile-username {
@@ -263,3 +274,4 @@ header {
 form.new_comment {
   width: auto;
 }
+

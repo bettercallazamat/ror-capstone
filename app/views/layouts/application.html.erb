@@ -1,93 +1,72 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>RorCapstone</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="container">
-      <div class="row notice-and-alert text-center">
-        <% if notice.present? %>
-          <span class="notice bg-success"><%= notice %></span>
-        <% end %>
-        <% if alert.present? %>
-          <span class="alert bg-warning"><%= alert %></span>
-        <% end %>
-      </div>
+        <div class="row notice-and-alert text-center">
+            <% if notice.present? %>
+            <span class="notice bg-success"><%= notice %></span>
+            <% end %>
+            <% if alert.present? %>
+            <span class="alert bg-warning"><%= alert %></span>
+            <% end %>
+        </div>
 
-      <div class="row">
-        <% if logged_in? %>
-          <nav class="col-3">
-            <div class="photo-and-name d-flex align-items-center mx-2">
-              <%= image_tag current_user.photo, class: "mr-2" %>
-              <%= link_to current_user.fullname, user_path(current_user.id) %> 
-            </div>
-            <div class="nav-counter d-flex flex-wrap justify-content-around">
-              <span class="text-center"><%= current_user.followeds.count %><br>Following</span>
-              <span class="text-center"><%= current_user.followers.count %><br>Followers</span>
-            </div>
-            <div class="nav-links text-left m-2">
-              <%= link_to root_path, class: "d-block"  do %>
-                <%= fa_icon "home" %>
-                <span>HOME</span>
-              <% end %>
-              <%= link_to root_path, class: "d-block"   do %>
-                <%= fa_icon "at" %>
-                <span>CONNECT</span>
-              <% end %>
-              <%= link_to root_path, class: "d-block"   do %>
-                <%= fa_icon "hashtag" %>
-                <span>DISCOVER</span>
-              <% end %>
-              <%= link_to user_path(current_user.id), class: "d-block"   do %>
-                <%= fa_icon "user" %>
-                <span>PROFILE</span>
-              <% end %>
-              <%= link_to root_path, class: "d-block"   do %>
-                <%= fa_icon "calculator" %>
-                <span>STATISTCS</span>
-              <% end %>
-              <%= link_to sign_out_path, class: "d-block"  , method: :delete do %>
-                <%= fa_icon "sign-out" %>
-                <span>SIGN OUT</span>
-              <% end %>
-            </div>
-          </nav>
-          
-          <main class="col m-0">
-            <header class="d-flex justify-content-between align-items-center">
-              <%= link_to root_path, class: "header-left" do %>
-                <%= fa_icon "twitter" %>   
-              <% end %>
-              <div class="header-right">
-                <%= link_to root_path do %>
-                  <%= fa_icon "pencil" %>   
-                <% end %> 
-                <%= link_to root_path do %>
-                  <%= fa_icon "envelope" %>
-                <% end %>   
-                <%= link_to root_path do %>
-                  <%= fa_icon "search" %>
-                <% end %> 
-                <%= link_to edit_user_path(current_user) do %>
-                  <%= fa_icon "cog" %>
-                <% end %> 
-              </div>
-            </header>
-          <% end %>
-          <div class="container">
-            <div class="row">
-              <%= yield %>
-            </div>
-          </div>
-        </main>  
-      </div>
-      
+        <div class="row">
+            <% if logged_in? %>
+            <nav class="col-3">
+                <div class="photo-and-name d-flex align-items-center mx-2">
+                    <%= image_tag current_user.photo, class: "mr-2" %>
+                    <%= link_to current_user.fullname, user_path(current_user.id) %>
+                </div>
+                <div class="nav-counter d-flex flex-wrap justify-content-around">
+                    <span class="text-center"><%= current_user.followeds.count %><br>Following</span>
+                    <span class="text-center"><%= current_user.followers.count %><br>Followers</span>
+                </div>
+                <div class="nav-links text-left m-2">
+                    <%= link_to root_path, class: "d-block"  do %>
+                    <%= fa_icon "home" %>
+                    <span>HOME</span>
+                    <% end %>
+                    <%= link_to user_path(current_user.id), class: "d-block"   do %>
+                    <%= fa_icon "user" %>
+                    <span>PROFILE</span>
+                    <% end %>
+                    <%= link_to sign_out_path, class: "d-block text-danger"  , method: :delete do %>
+                    <%= fa_icon "sign-out" %>
+                    <span>SIGN OUT</span>
+                    <% end %>
+                </div>
+            </nav>
+
+            <main class="col m-0">
+                <header class="d-flex justify-content-between align-items-center">
+                    <%= link_to root_path, class: "header-left" do %>
+                      <%= fa_icon "twitter" %>
+                    <% end %>
+                    <%= link_to edit_user_path(current_user), class: "header-right" do %>
+                      <%= fa_icon "cog" %>
+                    <% end %>
+                </header>
+                <% end %>
+                <div class="container">
+                    <div class="row">
+                        <%= yield %>
+                    </div>
+                </div>
+            </main>
+        </div>
+
     </div>
-  </body>
+</body>
+
 </html>
