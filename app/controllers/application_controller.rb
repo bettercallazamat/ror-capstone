@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
   def require_sign_in
     redirect_to sign_in_path, alert: 'Please sign in.' unless current_user
   end
+
+  def redirect_to_root_path
+    redirect_to root_path, alert: 'You already signed in.' if current_user
+  end
 end

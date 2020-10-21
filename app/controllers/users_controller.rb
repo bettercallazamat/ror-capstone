@@ -17,6 +17,23 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(current_user.id)
+  end
+
+  def update
+    @user = User.find(current_user.id)
+      if @user.update_attributes(user_params)
+        flash[:notice] = "User was successfully updated"
+        redirect_to @user
+      else
+        flash[:alert] = "Something went wrong"
+        render 'edit'
+      end
+  end
+  
+  
+
   def show
     @user = User.find(params[:id])
     @opinion = Opinion.new
