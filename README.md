@@ -46,6 +46,10 @@ In this project the following was used:
 
 ![Screenshot](app/assets/images/screenshot2.png)
 
+## Live Demo
+
+[Check it out!](https://rocky-castle-36138.herokuapp.com/)
+
 # Getting a Copy and Contributing
 
 This project is open for anyone who wants to clone it and create their version. If you just want the files and don't want to make further changes, follow the steps below to get a copy in your computer:
