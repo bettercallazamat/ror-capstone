@@ -17,7 +17,7 @@ class User < ApplicationRecord
   validates :photo, presence: true
 
   def who_to_follow
-    User.where.not(id: id).where.not(id: followeds).order('created_at DESC')
+    User.where.not(id: id).where.not(id: followeds).order('created_at DESC').limit(10)
   end
 
   after_commit :add_default_cover, on: :create

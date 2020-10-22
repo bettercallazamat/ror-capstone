@@ -3,7 +3,7 @@ class OpinionsController < ApplicationController
 
   def index
     @opinion = Opinion.new
-    @opinions = Opinion.most_recent
+    @opinions = Opinion.includes(:comments).most_recent.limit(20)
     @who_to_follow = current_user.who_to_follow
   end
 

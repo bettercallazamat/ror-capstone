@@ -2,8 +2,7 @@ module ApplicationHelper
   def show_notice_and_alert
     if notice.present?
       content_tag(:span, notice, class: "notice bg-success")
-    end
-    if alert.present?
+    elsif alert.present?
       content_tag(:span, alert, class: "alert bg-warning")
     end
   end
