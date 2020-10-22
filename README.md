@@ -91,6 +91,12 @@ install gems
 your@pc:~$ bundle install --without production
 ```
 
+create an empty database
+
+```Shell
+your@pc:~$ rails db:create
+```
+
 migrate the database
 
 ```Shell
