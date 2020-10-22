@@ -7,17 +7,15 @@
   </div>
 
   <div class="comment-section mt-2">
-  <% if opinion.comments.present? %>
-  <h4>All comments:</h4>
-  <% opinion.comments.each do |comment| %>
-    <div class="comment-content my-1">
-      <%= image_tag comment.user.photo %>
-      <span class="comment-author">@<%= link_to comment.user.username, user_path(comment.user.id) %>:</span>
-      <span class="comment-date"> at <%= comment.created_at.strftime("%Y/%m/%d") %>: </span>
-      <span class="comment-text"><%= comment.text %></span>
-    </div>
-  <% end %>
-  <% end %>
+    <%= show_comments_title(opinion) %>
+    <% opinion.comments.each do |comment| %>
+      <div class="comment-content my-1">
+          <%= image_tag comment.user.photo %>
+          <span class="comment-author">@<%= link_to comment.user.username, user_path(comment.user.id) %>:</span>
+          <span class="comment-date"> at <%= comment.created_at.strftime("%Y/%m/%d") %>: </span>
+          <span class="comment-text"><%= comment.text %></span>
+      </div>
+      <% end %>
   </div>
 
   <%= form_for(opinion.comments.new, url: opinion_comments_path(opinion)) do |form| %>
