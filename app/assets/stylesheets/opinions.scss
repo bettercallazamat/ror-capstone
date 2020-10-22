@@ -1,0 +1,95 @@
+.opinions-section {
+  border-right: 3px solid $gray;
+  height: auto;
+  min-height: 80vh;
+}
+
+.opinions-nav {
+  margin: 0 -15px 0 -30px;
+  padding-left: 15px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid $gray;
+}
+
+.opinions-nav-user {
+  margin-top: 185px;
+}
+
+.opinions-nav a {
+  color: $gray;
+  padding-right: 30px;
+}
+
+.opinions-nav a:first-of-type {
+  padding-left: 20px;
+  color: $dark-gray;
+  font-weight: bold;
+}
+
+.tweet-form, .tweet-feed {
+  background-color: #f9f9f9;
+  border: 1px solid $gray;
+}
+
+.tweet-feed h3 {
+  border-bottom: 2px solid $gray;
+}
+
+.tweet-feed .main-content {
+  min-height: 60px;
+}
+
+.tweet-feed .author {
+  color: $dark-blue;
+  font-size: 16px;
+}
+
+.tweet-feed h4 {
+  color: $dark-blue;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.tweet-feed .content img {
+  height: 30px;
+  width: 30px;
+}
+
+.tweet-feed .content {
+  flex-grow: 1;
+}
+
+.comment-author a, .comment-date, .comment-author {
+  color: $dark-blue;
+}
+
+.who-to-follow h3, .followed-by-section h3 {
+  height: 70px;
+  text-align: center;
+  padding-top: 24px;
+  border-bottom: 3px solid $gray;
+}
+
+.who-to-follow img, .followed-by-section img {
+  width: 40px;
+  height: 40px;
+}
+
+.who-to-follow-fullname, .followed-by-fullname {
+  font-size: 13px;
+  color: $dark-gray;
+}
+
+.right-section, .who-to-follow span {
+  font-size: 12px;
+}
+
+.last-follower a {
+  color: $dark-gray;
+}
+
+form.new_comment {
+  width: auto;
+}

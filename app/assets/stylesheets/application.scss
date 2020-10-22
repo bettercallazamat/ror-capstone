@@ -10,6 +10,10 @@ $light-gray: #e7e8e9;
 $gray: #acadaf;
 $dark-gray: #5b6e80;
 
+@import "opinions";
+@import "sessions";
+@import "users";
+
 body {
   font-family: "Poppins", sans-serif;
   color: $gray;
@@ -67,17 +71,6 @@ img {
   height: 60px;
 }
 
-.cover-image {
-  box-sizing: content-box;
-  width: 100%;
-  height: 175px;
-  border: 7.5px solid $light-blue;
-  margin-right: 15px;
-  position: absolute;
-  left: -15px;
-  object-fit: cover;
-}
-
 main {
   background-color: $light-gray;
 }
@@ -109,154 +102,8 @@ header {
   padding-top: 20%;
 }
 
-.opinions-section {
-  border-right: 3px solid $gray;
-  height: auto;
-  min-height: 80vh;
-}
-
-.opinions-nav {
-  margin: 0 -15px 0 -30px;
-  padding-left: 15px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  border-bottom: 3px solid $gray;
-}
-
-.opinions-nav-user {
-  margin-top: 185px;
-}
-
-.opinions-nav a {
-  color: $gray;
-  padding-right: 30px;
-}
-
-.opinions-nav a:first-of-type {
-  padding-left: 20px;
-  color: $dark-gray;
-  font-weight: bold;
-}
-
-.tweet-form, .tweet-feed {
-  background-color: #f9f9f9;
-  border: 1px solid $gray;
-}
-
-.tweet-feed h3 {
-  border-bottom: 2px solid $gray;
-}
-
-.tweet-feed .main-content {
-  min-height: 60px;
-}
-
-.tweet-feed .author {
-  color: $dark-blue;
-  font-size: 16px;
-}
-
-.tweet-feed h4 {
-  color: $dark-blue;
-  font-size: 16px;
-  font-weight: normal;
-}
-
-.tweet-feed .content img {
-  height: 30px;
-  width: 30px;
-}
-
-.tweet-feed .content {
-  flex-grow: 1;
-}
-
-.comment-author a, .comment-date, .comment-author {
-  color: $dark-blue;
-}
-
 .right-section {
   margin-right: -15px;
-}
-
-.who-to-follow h3, .followed-by-section h3 {
-  height: 70px;
-  text-align: center;
-  padding-top: 24px;
-  border-bottom: 3px solid $gray;
-}
-
-.who-to-follow img, .followed-by-section img {
-  width: 40px;
-  height: 40px;
-}
-
-.who-to-follow-fullname, .followed-by-fullname {
-  font-size: 13px;
-  color: $dark-gray;
-}
-
-.right-section, .who-to-follow span {
-  font-size: 12px;
-}
-
-.follow-btn, .unfollow-btn, .profile-photo i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 22px;
-  height: 22px;
-  font-size: 20px;
-  border-radius: 50%;
-  border: 1.5px solid $gray;
-  color: $gray;
-}
-
-.follow-btn:hover, .unfollow-btn:hover, .profile-photo i:hover, .profile-photo a:hover {
-  border-color: $light-blue;
-  color: $light-blue;
-  text-decoration: none;
-}
-
-.profile-photo img{
-  width: 80px;
-  height: 80px;
-}
-
-.profile-photo .unfollow-btn, .profile-photo .follow-btn, .profile-photo i {
-  width: 30px;
-  height: 30px;
-  border: 1.5px solid $gray;
-  border-radius: 50%;
-}
-
-.profile-desc-counts p:first-of-type, .profile-desc-counts p:nth-of-type(2)  {
-  border-right: 2px solid $dark-blue;
-  margin: 1px;
-}
-
-.profile-photo i {
-  font-size: 15px;
-}
-
-.profile-desc-counts {
-  border-top: 2px solid $gray;
-  border-bottom: 2px solid $gray;
-}
-
-.profile-desc-count-center {
-  border-left: 2px solid $gray;
-  border-right: 2px solid $gray;
-}
-
-.profile-fullname, .profile-desc-counter {
-  color: $dark-blue;
-  font-size: 18px;
-}
-
-.last-follower a {
-  color: $dark-gray;
 }
 
 .profile-fullname:hover,
@@ -266,12 +113,3 @@ header {
   text-decoration: none;
   color: $light-blue;
 }
-
-.profile-username {
-  font-size: 16px;
-}
-
-form.new_comment {
-  width: auto;
-}
-
