@@ -9,4 +9,10 @@ module UsersHelper
     end
     res.html_safe
   end
+
+  def show_errors(object)
+    if object.errors.any?
+      object.errors.full_messages[0].html_safe
+    end
+  end
 end
