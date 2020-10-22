@@ -48,7 +48,7 @@ In this project the following was used:
 
 ## Live Demo
 
-[Check it out!](https://rocky-castle-36138.herokuapp.com/)
+[Check it out!](https://peaceful-wave-82547.herokuapp.com/)
 
 # Getting a Copy and Contributing
 
