@@ -11,7 +11,6 @@ $gray: #acadaf;
 $dark-gray: #5b6e80;
 
 @import "opinions";
-@import "sessions";
 @import "users";
 
 body {
@@ -44,6 +43,7 @@ h4 {
   font-size: 18px;
   padding: 5px 0;
   color: $light-gray;
+  margin-bottom: 0;
 }
 
 .photo-and-name {
