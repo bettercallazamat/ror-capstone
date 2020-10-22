@@ -24,11 +24,6 @@ nav {
   min-height: 100vh;
 }
 
-nav a:hover {
-  text-decoration: none;
-  color: $light-blue;
-}
-
 h3 {
   font-size: 18px;
 }
@@ -37,7 +32,8 @@ h4 {
   font-size: 30px;
 }
 
-.notice, .alert {
+.notice,
+.alert {
   width: 100%;
   display: block;
   font-size: 18px;
@@ -56,7 +52,8 @@ h4 {
   padding: 10px 0;
 }
 
-.photo-and-name a, .nav-counter {
+.photo-and-name a,
+.nav-counter {
   color: $light-gray;
 }
 
@@ -97,13 +94,19 @@ header {
   color: $light-gray;
 }
 
-.sign-in, .sign-up {
+.sign-in,
+.sign-up {
   height: 100vh;
   padding-top: 20%;
 }
 
 .right-section {
   margin-right: -15px;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: $light-blue;
 }
 
 .profile-fullname:hover,

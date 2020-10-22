@@ -9,7 +9,9 @@
   object-fit: cover;
 }
 
-.follow-btn, .unfollow-btn, .profile-photo i {
+.follow-btn,
+.unfollow-btn,
+.profile-photo i {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,31 +23,37 @@
   color: $gray;
 }
 
-.follow-btn:hover, .unfollow-btn:hover, .profile-photo i:hover, .profile-photo a:hover {
-  border-color: $light-blue;
-  color: $light-blue;
-  text-decoration: none;
-}
-
-.profile-photo img{
+.profile-photo img {
   width: 80px;
   height: 80px;
 }
 
-.profile-photo .unfollow-btn, .profile-photo .follow-btn, .profile-photo i {
+.profile-photo .unfollow-btn,
+.profile-photo .follow-btn,
+.profile-photo i {
   width: 30px;
   height: 30px;
   border: 1.5px solid $gray;
   border-radius: 50%;
 }
 
-.profile-desc-counts p:first-of-type, .profile-desc-counts p:nth-of-type(2)  {
+.profile-desc-counts p:first-of-type,
+.profile-desc-counts p:nth-of-type(2) {
   border-right: 2px solid $dark-blue;
   margin: 1px;
 }
 
 .profile-photo i {
   font-size: 15px;
+}
+
+.follow-btn:hover,
+.unfollow-btn:hover,
+.profile-photo i:hover,
+.profile-photo a:hover {
+  border-color: $light-blue;
+  color: $light-blue;
+  text-decoration: none;
 }
 
 .profile-desc-counts {
@@ -58,7 +66,8 @@
   border-right: 2px solid $gray;
 }
 
-.profile-fullname, .profile-desc-counter {
+.profile-fullname,
+.profile-desc-counter {
   color: $dark-blue;
   font-size: 18px;
 }

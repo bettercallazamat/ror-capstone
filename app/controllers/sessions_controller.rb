@@ -20,10 +20,9 @@ class SessionsController < ApplicationController
     if session[:user_id]
       session[:user_id] = nil
       flash[:notice] = 'You have successfully logged out'
-      redirect_to sign_in_path
     else
       flash[:notice] = 'Something went wrong...'
-      redirect_to sign_in_path
     end
+    redirect_to sign_in_path
   end
 end

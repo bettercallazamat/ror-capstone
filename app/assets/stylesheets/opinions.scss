@@ -17,6 +17,16 @@
   margin-top: 185px;
 }
 
+.last-follower a {
+  color: $dark-gray;
+}
+
+.comment-author a,
+.comment-date,
+.comment-author {
+  color: $dark-blue;
+}
+
 .opinions-nav a {
   color: $gray;
   padding-right: 30px;
@@ -28,7 +38,8 @@
   font-weight: bold;
 }
 
-.tweet-form, .tweet-feed {
+.tweet-form,
+.tweet-feed {
   background-color: #f9f9f9;
   border: 1px solid $gray;
 }
@@ -52,6 +63,12 @@
   font-weight: normal;
 }
 
+.who-to-follow img,
+.followed-by-section img {
+  width: 40px;
+  height: 40px;
+}
+
 .tweet-feed .content img {
   height: 30px;
   width: 30px;
@@ -61,33 +78,23 @@
   flex-grow: 1;
 }
 
-.comment-author a, .comment-date, .comment-author {
-  color: $dark-blue;
-}
-
-.who-to-follow h3, .followed-by-section h3 {
+.who-to-follow h3,
+.followed-by-section h3 {
   height: 70px;
   text-align: center;
   padding-top: 24px;
   border-bottom: 3px solid $gray;
 }
 
-.who-to-follow img, .followed-by-section img {
-  width: 40px;
-  height: 40px;
-}
-
-.who-to-follow-fullname, .followed-by-fullname {
+.who-to-follow-fullname,
+.followed-by-fullname {
   font-size: 13px;
   color: $dark-gray;
 }
 
-.right-section, .who-to-follow span {
+.right-section,
+.who-to-follow span {
   font-size: 12px;
-}
-
-.last-follower a {
-  color: $dark-gray;
 }
 
 form.new_comment {

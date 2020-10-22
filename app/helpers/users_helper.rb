@@ -11,16 +11,14 @@ module UsersHelper
   end
 
   def show_errors(object)
-    if object.errors.any?
-      object.errors.full_messages[0].html_safe
-    end
+    object.errors.full_messages[0].html_safe if object.errors.any?
   end
 
   def show_followers
     if @user.followers.none?
-      content_tag(:p, "NO FOLLOWERS")
+      content_tag(:p, 'NO FOLLOWERS')
     else
-      render "/shared/followers"
+      render '/shared/followers'
     end
   end
 end
