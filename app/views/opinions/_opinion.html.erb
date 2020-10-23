@@ -1,0 +1,28 @@
+<div class="d-flex mt-3">
+<%= image_tag opinion.author.photo %>
+<div class="content ml-2">
+  <div class="main-content">
+    <span><%= link_to opinion.author.fullname, user_path(opinion.author.id), class: "author" %></span><br>
+    <span class="tweet-text"><%= opinion.text %></span>
+  </div>
+
+  <div class="comment-section mt-2">
+    <%= show_comments_title(opinion) %>
+    <% opinion.comments.each do |comment| %>
+      <div class="comment-content my-1">
+          <%= image_tag comment.user.photo %>
+          <span class="comment-author">@<%= link_to comment.user.username, user_path(comment.user.id) %>:</span>
+          <span class="comment-date"> at <%= comment.created_at.strftime("%Y/%m/%d") %>: </span>
+          <span class="comment-text"><%= comment.text %></span>
+      </div>
+      <% end %>
+  </div>
+
+  <%= form_for(opinion.comments.new, url: opinion_comments_path(opinion)) do |form| %>
+    <div class="form-group">
+      <%= form.text_field :text, id: :comment_text, class: "form-control", placeholder: 'Add comment' %>
+    </div>
+    <%= form.submit 'Comment', class: "d-none" %>
+  <% end %>
+</div>
+</div>

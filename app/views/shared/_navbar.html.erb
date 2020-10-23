@@ -1,0 +1,24 @@
+<nav class="col-3">
+    <div class="photo-and-name d-flex align-items-center mx-2">
+        <%= image_tag current_user.photo, class: "mr-2" %>
+        <%= link_to current_user.fullname, user_path(current_user.id) %>
+    </div>
+    <div class="nav-counter d-flex flex-wrap justify-content-around">
+        <span class="text-center"><%= current_user.followeds.count %><br>Following</span>
+        <span class="text-center"><%= current_user.followers.count %><br>Followers</span>
+    </div>
+    <div class="nav-links text-left m-2">
+        <%= link_to root_path, class: "d-block"  do %>
+        <%= fa_icon "home" %>
+        <span>HOME</span>
+        <% end %>
+        <%= link_to user_path(current_user.id), class: "d-block"   do %>
+        <%= fa_icon "user" %>
+        <span>PROFILE</span>
+        <% end %>
+        <%= link_to sign_out_path, class: "d-block text-danger"  , method: :delete do %>
+        <%= fa_icon "sign-out" %>
+        <span>SIGN OUT</span>
+        <% end %>
+    </div>
+</nav>

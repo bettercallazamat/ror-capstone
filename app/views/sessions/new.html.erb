@@ -1,0 +1,14 @@
+<div class="container sign-in">
+<div class="sign-in-form row justify-content-center">
+  <%= form_for(:session, url: sign_in_path, html: {class: "col-5"}) do |f| %>
+    <h4 class="text-center col-12">Sign In</h4>
+    <div class="form-group">
+      <%= f.text_field :username, autofocus: true, class: "form-control", placeholder: "Enter a username" %>
+    </div>
+    <div class="form-group text-center">
+      <%= f.submit 'Login', class: "btn btn-primary col-12" %>
+    </div>
+  <% end %>
+  <p class="col-12 text-center">Don't have an account? <%= link_to 'Signup', new_user_path %></p>
+</div>
+</div>

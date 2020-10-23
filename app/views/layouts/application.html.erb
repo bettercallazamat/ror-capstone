@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>RorCapstone</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+    <div class="container">
+        <div class="row notice-and-alert text-center">
+            <%= show_notice_and_alert %>
+        </div>
+        <div class="row">
+            <%= show_navbar %>
+            <main class="col m-0">
+                <%= show_header %>
+                <div class="container">
+                    <div class="row">
+                        <%= yield %>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
 </html>

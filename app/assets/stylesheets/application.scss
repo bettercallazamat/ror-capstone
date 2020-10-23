@@ -1,0 +1,110 @@
+
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome";
+@import "variables";
+@import "opinions";
+@import "users";
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: $gray;
+}
+
+nav {
+  background-color: $dark-blue;
+  height: auto;
+  min-height: 100vh;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+.notice,
+.alert {
+  width: 100%;
+  display: block;
+  font-size: 18px;
+  padding: 5px 0;
+  color: $light-gray;
+  margin-bottom: 0;
+}
+
+.photo-and-name {
+  height: 100px;
+}
+
+.nav-counter {
+  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+  padding: 10px 0;
+}
+
+.photo-and-name a,
+.nav-counter {
+  color: $light-gray;
+}
+
+.nav-links a {
+  color: $gray;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+}
+
+main {
+  background-color: $light-gray;
+}
+
+header {
+  height: 100px;
+  background-color: $light-blue;
+  margin: 0 -15px;
+  padding: 0 30px;
+  font-size: 25px;
+}
+
+.header-left {
+  color: $light-gray;
+  font-size: 30px;
+}
+
+.header-right {
+  color: $dark-blue;
+  padding-left: 20px;
+}
+
+.header-right:hover {
+  color: $light-gray;
+}
+
+.sign-in,
+.sign-up {
+  height: 100vh;
+  padding-top: 20%;
+}
+
+.right-section {
+  margin-right: -15px;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: $light-blue;
+}
+
+.profile-fullname:hover,
+.followed-by-fullname:hover,
+.who-to-follow-fullname:hover,
+.last-follower a:hover {
+  text-decoration: none;
+  color: $light-blue;
+}

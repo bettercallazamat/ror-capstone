@@ -1,0 +1,24 @@
+<div class="container sign-up">
+    <div class="sign-up-form row justify-content-center">
+        <%= form_for(@user, html:{ class: "col-5"}) do |f| %>
+        <h4 class="text-center">Sign Up</h4>
+        <span class="text-danger"><%= show_errors(@user) %></span>
+        <div class="form-group">
+            <%= f.text_field :username, class: "form-control", placeholder: "Enter a username" %>
+        </div>
+        <div class="form-group">
+            <%= f.text_field :fullname, class: "form-control", placeholder: "Enter full name" %>
+        </div>
+        <%= f.label :photo do %>
+        Attach your profile photo
+        <%= f.file_field :photo, class: "mb-3" %>
+        <% end %>
+        <%= f.label :cover_image do %>
+        Attach your cover image (not mandatory)
+        <%= f.file_field :cover_image, class: "mb-3" %>
+        <% end %>
+        <%= f.submit class: "btn btn-primary col-12" %>
+        <p class="col-12 text-center">Already have an account? <%= link_to 'Sign in', sign_in_path %></p>
+        <% end %>
+    </div>
+</div>

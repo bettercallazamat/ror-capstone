@@ -1,0 +1,10 @@
+<% @user.followers.each do |follower| %>
+  <div class="followed-by-person d-flex align-items-center my-1">
+    <%= image_tag follower.photo, class: "mr-1" %>
+    <div>
+      <%= link_to follower.fullname, user_path(follower.id), class: "followed-by-fullname" %>
+      <span>@<%= follower.username %></span>
+    </div>
+    <%= followings_button(follower) %>
+  </div>
+<% end %>
